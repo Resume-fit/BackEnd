@@ -1,12 +1,9 @@
 package com.resumefit.resumefit_backend.domain.jobposition.entity;
 
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 
 @Getter
-
 public enum EmploymentType {
-
     FULL_TIME("정규직"),
     CONTRACT("계약직"),
     INTERN("인턴"),

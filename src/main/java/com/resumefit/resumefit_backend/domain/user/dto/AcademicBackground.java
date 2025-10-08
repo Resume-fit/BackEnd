@@ -4,7 +4,6 @@ import lombok.Getter;
 
 @Getter
 public enum AcademicBackground {
-
     HIGH_SCHOOL("고등학교 졸업"),
     ASSOCIATE_DEGREE("대학 졸업 (2, 3년)"),
     BACHELOR_DEGREE("대학교 졸업 (4년)"),

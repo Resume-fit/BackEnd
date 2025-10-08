@@ -1,6 +1,7 @@
 package com.resumefit.resumefit_backend.exception;
 
 import lombok.Getter;
+
 import org.springframework.http.HttpStatus;
 
 @Getter
@@ -23,8 +24,8 @@ public enum ErrorCode {
     // 500 Internal Server Error: 서버 내부 오류
     INTERNAL_SERVER_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, "서버 내부에 알 수 없는 오류가 발생했습니다.");
 
-    private final HttpStatus status;       // HTTP 상태 코드
-    private final String message;        // 에러 메시지
+    private final HttpStatus status; // HTTP 상태 코드
+    private final String message; // 에러 메시지
 
     ErrorCode(HttpStatus status, String message) {
         this.status = status;
