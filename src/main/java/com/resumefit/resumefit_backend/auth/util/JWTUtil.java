@@ -16,22 +16,26 @@ public class JWTUtil {
     // application.yml에서 secret key 값을 가져옴
     public JWTUtil(@Value("${spring.jwt.secret}") String secret) {
         // secret 키를 암호화 알고리즘(HS256)에 맞게 생성
-        this.secretKey = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), Jwts.SIG.HS256.key().build().getAlgorithm());
+        this.secretKey = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8),
+            Jwts.SIG.HS256.key().build().getAlgorithm());
     }
 
     // JWT 토큰에서 사용자 아이디(loginId)를 추출
     public String getUsername(String token) {
-        return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload().get("email", String.class);
+        return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload()
+            .get("email", String.class);
     }
 
     // JWT 토큰에서 사용자 역할(role)을 추출
     public String getRole(String token) {
-        return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload().get("role", String.class);
+        return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload()
+            .get("role", String.class);
     }
 
     // JWT 토큰이 만료되었는지 확인
     public Boolean isExpired(String token) {
-        return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload().getExpiration().before(new Date());
+        return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload()
+            .getExpiration().before(new Date());
     }
 
     // JWT 토큰 생성

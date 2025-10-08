@@ -17,6 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RefreshToken {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,6 +30,7 @@ public class RefreshToken {
 
     @Column(nullable = false)
     private LocalDateTime expirationDate;
+
     public boolean isExpired() {
         return LocalDateTime.now().isAfter(this.expirationDate);
     }

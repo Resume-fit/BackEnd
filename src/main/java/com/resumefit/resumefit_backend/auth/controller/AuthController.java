@@ -31,10 +31,12 @@ public class AuthController {
     private final RefreshTokenService refreshTokenService;
 
     @PostMapping("/login")
-    public ResponseEntity<LoginResponseDto> login(@RequestBody LoginRequestDto requestDto, HttpServletResponse response) {
+    public ResponseEntity<LoginResponseDto> login(@RequestBody LoginRequestDto requestDto,
+        HttpServletResponse response) {
 
         UsernamePasswordAuthenticationToken authToken =
-            new UsernamePasswordAuthenticationToken(requestDto.getEmail(), requestDto.getPassword(), null);
+            new UsernamePasswordAuthenticationToken(requestDto.getEmail(), requestDto.getPassword(),
+                null);
 
         Authentication authentication = authenticationManager.authenticate(authToken);
 
