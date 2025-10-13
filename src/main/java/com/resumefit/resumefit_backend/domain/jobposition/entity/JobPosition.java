@@ -7,9 +7,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
-import lombok.Data;
 
 @Entity
 @Data
@@ -32,5 +34,4 @@ public class JobPosition {
     private List<Requirement> requirements = new ArrayList<>();
 
     private String url;
-
 }

@@ -2,8 +2,11 @@ package com.resumefit.resumefit_backend.domain.user.controller;
 
 import com.resumefit.resumefit_backend.domain.user.dto.JoinRequestDto;
 import com.resumefit.resumefit_backend.domain.user.service.JoinService;
+
 import jakarta.validation.Valid;
+
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

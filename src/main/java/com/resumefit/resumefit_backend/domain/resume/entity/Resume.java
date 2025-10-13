@@ -2,6 +2,7 @@ package com.resumefit.resumefit_backend.domain.resume.entity;
 
 import com.resumefit.resumefit_backend.domain.resumeskill.entity.ResumeSkill;
 import com.resumefit.resumefit_backend.domain.user.entity.User;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,10 +15,12 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
+
+import lombok.Data;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import lombok.Data;
 
 @Entity
 @Data

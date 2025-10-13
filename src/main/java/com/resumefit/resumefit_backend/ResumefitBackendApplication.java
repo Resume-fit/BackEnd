@@ -9,5 +9,4 @@ public class ResumefitBackendApplication {
     public static void main(String[] args) {
         SpringApplication.run(ResumefitBackendApplication.class, args);
     }
-
 }

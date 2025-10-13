@@ -29,6 +29,4 @@ public class Requirement {
 
     @Column(nullable = false)
     private String content;
-
-
 }
